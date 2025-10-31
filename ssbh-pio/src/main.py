@@ -10,9 +10,9 @@ def read_root():
     return {"Hello": "World"}
 
 @app.post("/")
-def post_root():
+def post_root(temperature: str):
     print("Received POST")
-    return {"Hello": "World1"}
+    return {temperature}
 
 
 @app.get("/items/{item_id}")
