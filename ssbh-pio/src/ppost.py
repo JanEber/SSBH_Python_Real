@@ -1,12 +1,9 @@
 import requests
 
+api_url = "http://192.168.56.1:8000"  # your FastAPI server
+params = {"temperature": "25"}        # query parameters
 
-api_url = "http://10.42.24.33:8000"
-data = {"userId": 1, "title": "Buy milk", "completed": False}
-response = requests.post(api_url, json=data)
-response.json()
+response = requests.post(api_url, params=params)
 
 print(response.status_code)
 print(response.json())
-
-response.status_code
